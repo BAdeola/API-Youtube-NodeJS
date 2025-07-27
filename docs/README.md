@@ -1,7 +1,7 @@
 # Youtube manager.
 ## Description
-Management of videos from the Augusto Galego YouTube channel.
-This application allows users to search for videos on YouTube channel Augusto Galego, filter them by name, view details, header image. It is designed to help users easily find and manage their favorite YouTube content.
+Management of videos from the Taylor Swift YouTube channel.
+This application allows users to search for videos on YouTube channel Taylor Swift, filter them by name, view details, header image. It is designed to help users easily find and manage their favorite YouTube content.
 
 ## Technologies
 - Node.js
@@ -21,15 +21,15 @@ Youtube videos management.
 - **Search Videos**: List videos by channel name.
 The API rest will return in a Json format the name of the video, the image, and the link to the video.
 ```js
-channel: "Augusto Galego",
+channel: "Taylor Swift",
 videos: [
     {
-        title: "Quão util REALMENTE é a IA pra programar?",
-        videoId: "ixdabfKYwfA",
+        title: "Anti-Hero (Behind The Scenes with The Ghosts In The Room)",
+        videoId: "P0haCYjysUs",
     },
     {
-        title: "OS MELHORES LIVROS DE PROGRAMAÇÃO (2025)",
-        videoId: "cz_8yTzM-iY",
+        title: "Taylor Swift - Bejeweled (Official Music Video)",
+        videoId: "b7QlX3yR2xs",
     },
 ]
 ```
