@@ -1,15 +1,7 @@
-
+import { repositoryVideos } from "../repositories/videos-repository";   
 
 export const serviceListEpisode = async () =>{
-    const data = [{
-            title: "Quão util REALMENTE é a IA pra programar?",
-            videoId: "ixdabfKYwfA",
-        },
-        {
-            title: "OS MELHORES LIVROS DE PROGRAMAÇÃO (2025)",
-            videoId: "cz_8yTzM-iY",
-        },
-    ];
+    const data = await repositoryVideos(); // call the repository to get the list of videos
 
     return data;
 }
