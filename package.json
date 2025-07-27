@@ -1,0 +1,37 @@
+{
+  "name": "api-podcast",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dist": "tsup src",
+    "start:dist": "npm run dist && node dist/server.js",
+    "start:dev": "tsx src/server.ts",
+    "start:watch": "tsx watch src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BAdeola/API-Podcast-NodeJS.git"
+  },
+  "keywords": [
+    "youtube",
+    "podcast",
+    "api",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Brayan Adeolá",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BAdeola/API-Podcast-NodeJS/issues"
+  },
+  "homepage": "https://github.com/BAdeola/API-Podcast-NodeJS#readme",
+  "description": "Creating a Youtube API for the Augusto Galego channel using NodeJS and Typescript",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6", //especifica a versão do JavaScript para a qual o TypeScript será compilado
+    "module": "commonjs", //por motivos de compatibilidade com coisas antigas
+    "outDir": "./dist", //diretório de saída dos arquivos compilados em javascript
+    "strict": true, //ativa todas as verificações de tipo de variáveis
+    "esModuleInterop": true, //permite a importação de módulos CommonJS
+  }
+}
