@@ -26,14 +26,10 @@ videos: [
     {
         title: "Quão util REALMENTE é a IA pra programar?",
         videoId: "ixdabfKYwfA",
-        thumbnail: "https://i.ytimg.com/vi/ixdabfKYwfA/maxresdefault.jpg",
-        url: "https://www.youtube.com/watch?v=ixdabfKYwfA",
     },
     {
         title: "OS MELHORES LIVROS DE PROGRAMAÇÃO (2025)",
         videoId: "cz_8yTzM-iY",
-        thumbnail: "https://i.ytimg.com/vi/cz_8yTzM-iY/maxresdefault.jpg",
-        url: "https://www.youtube.com/watch?v=cz_8yTzM-iY",
     },
 ]
 ```
