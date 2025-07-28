@@ -1,13 +1,19 @@
 import fs from 'fs';
 import path from 'path';
 import { Video } from '../modules/video-model';
+import { json } from 'stream/consumers';
 
 
 const pathData = path.join(__dirname, '../repositories/videos.json');
 
-export const repositoryVideos = async (): Promise<Video[]> => {
+export const repositoryVideos = async (videoName?: string): Promise<Video[]> => {
     const data = fs.readFileSync(pathData, 'utf-8');
-    const jsonFile = JSON.parse(data);
+    let jsonFile = JSON.parse(data);
 
+    if(videoName){
+        jsonFile = jsonFile.filter((video: Video) => 
+            video.title.toLowerCase().includes(videoName.toLowerCase())
+        );
+    }
     return jsonFile;
 };

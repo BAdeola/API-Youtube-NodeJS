@@ -26,10 +26,12 @@ videos: [
     {
         title: "Anti-Hero (Behind The Scenes with The Ghosts In The Room)",
         videoId: "P0haCYjysUs",
+        views: 1194921
     },
     {
         title: "Taylor Swift - Bejeweled (Official Music Video)",
         videoId: "b7QlX3yR2xs",
+        views: 95222920
     },
 ]
 ```

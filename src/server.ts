@@ -1,10 +1,13 @@
 import * as http from 'http';
-import { getListVideos } from './controllers/app-controller';
+import { getListVideos, getFilteredVideos } from './controllers/app-controller';
 
-const server = http.createServer(
-    async (req: http.IncomingMessage, res: http.ServerResponse) => {
-        if (req.method === 'GET') {
+const server = http.createServer(async (req: http.IncomingMessage, res: http.ServerResponse) => {
+        if (req.method === 'GET' && req.url === '/list-videos') {
             await getListVideos(req, res);
+        }
+
+        if (req.method === 'GET' && req.url === '/filter-videos') {
+            await getFilteredVideos(req, res);
         }
     }
 );
