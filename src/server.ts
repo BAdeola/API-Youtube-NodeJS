@@ -1,12 +1,18 @@
 import * as http from 'http';
 import { getListVideos, getFilteredVideos } from './controllers/app-controller';
+import { Routes } from './routes/routes';
 
 const server = http.createServer(async (req: http.IncomingMessage, res: http.ServerResponse) => {
-        if (req.method === 'GET' && req.url === '/list-videos') {
+        //query String
+        const baseUrl = req.url?.split('?')[0] || '';
+
+        // list videos
+        if (req.method === 'GET' && baseUrl === Routes.LIST) {
             await getListVideos(req, res);
         }
 
-        if (req.method === 'GET' && req.url === '/filter-videos') {
+        // filter videos
+        if (req.method === 'GET' && baseUrl === Routes.FILTER) {
             await getFilteredVideos(req, res);
         }
     }

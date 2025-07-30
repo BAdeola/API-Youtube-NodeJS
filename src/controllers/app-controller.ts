@@ -10,7 +10,9 @@ export const getListVideos = async (req: IncomingMessage, res: ServerResponse) =
 };
 
 export const getFilteredVideos = async (req: IncomingMessage, res: ServerResponse) => {
-  const content = await serviceFilterEpisodes("Anti-hero")// Get the query string from the URL
+  // Get the query string from the URL
+
+  const content = await serviceFilterEpisodes(req)// Get the query string from the URL
 
   res.writeHead(200, { 'Content-Type': 'application/json' }); //menas that i'm returning a json
   res.end(JSON.stringify(content)); // Return the filtered list of videos as JSON
