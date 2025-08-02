@@ -1,6 +1,6 @@
-# Youtube Manager O(∩_∩)O
-<p>
-  <img src="https://i.pinimg.com/originals/00/92/27/009227acec22acf658c06c9b7e34e000.gif" width="40%" alt="GIF Taylor Swift">
+<h1 align="center">Youtube Manager O(∩_∩)O</h2>
+<p align="center">
+  <img src="https://i.pinimg.com/originals/00/92/27/009227acec22acf658c06c9b7e34e000.gif" width="100%" alt="GIF Taylor Swift">
 </p>
  
 ## Description
