@@ -3,12 +3,11 @@ import { repositoryVideos } from '../repositories/videos-repository';
 import { StatusCode } from '../utils/status-code';
 import { FilterVideoModule } from '../modules/filter-app-model';
 
-export const serviceFilterEpisodes = async (request: IncomingMessage): Promise<FilterVideoModule> => {
+export const serviceFilterEpisodes = async (name: string | undefined):Promise<FilterVideoModule> => {
     try {
         // Searching for videos in the repository
-        const url = new URL(request.url || '', `http://${request.headers.host}`);
-        const nome = url.searchParams.get('nome');
-        const videos = await repositoryVideos(nome || undefined);
+        const querystring = name?.split('?v=')[1] || '';
+        const video = await repositoryVideos(querystring); 
         
         // Define the response format
         let responseFormat: FilterVideoModule = {
@@ -17,16 +16,10 @@ export const serviceFilterEpisodes = async (request: IncomingMessage): Promise<F
         }
 
         // Verify if the data is empty
-        if (!videos || videos.length === 0) {
-            responseFormat.statusCode = StatusCode.NO_CONTENT; // Set status code to 204 if no videos found
-            responseFormat.body = []; 
-            return responseFormat;
-        } else {
-            responseFormat.statusCode = StatusCode.OK; // Set status code to 200 if videos are found
-        }
+        responseFormat.statusCode = video.length !== 0 ? StatusCode.OK : StatusCode.NO_CONTENT;
 
-        // Map the videos to the expected format
-        responseFormat.body = videos.map(video => ({
+        // Map the video to the expected format
+        responseFormat.body = video.map(video => ({
             title: video.title,
             videoId: video.videoId,
             views: video.views

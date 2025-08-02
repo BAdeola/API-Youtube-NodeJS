@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { Video } from '../modules/video-transfer-model';
-import { json } from 'stream/consumers';
-
+import { Video } from '../modules/video-transfer-model';    
 
 const pathData = path.join(__dirname, '../repositories/videos.json');
 
