@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { Video } from '../modules/video-model';
+import { Video } from '../modules/video-transfer-model';
 import { json } from 'stream/consumers';
 
 
