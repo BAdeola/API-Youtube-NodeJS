@@ -1,4 +1,4 @@
-# Youtube manager.
+# Youtube Manager O(∩_∩)O
 ## Description
 Management of videos from the Taylor Swift YouTube channel.
 This application allows users to search for videos on YouTube channel Taylor Swift, filter them by name, view details, header image. It is designed to help users easily find and manage their favorite YouTube content.
